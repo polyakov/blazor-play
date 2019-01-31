@@ -6,5 +6,11 @@ namespace ClassLibrary1
    {
       public static int Value;
 
+
+      public static int IncrementValue( int increment = 1 )
+      {
+         Value += increment;
+         return Value;
+      }
    }
 }
