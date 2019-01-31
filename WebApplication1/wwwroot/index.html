@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -12,5 +12,17 @@
     <app>Loading...</app>
 
     <script src="_framework/blazor.webassembly.js"></script>
+
+
+    <script>
+        window.callInterop = async () => {
+            console.log("Here");
+
+            console.log(await DotNet.invokeMethodAsync('ClassLibrary1', 'IncrementValue', 1));
+
+            return true;
+
+        }
+    </script>
 </body>
 </html>
